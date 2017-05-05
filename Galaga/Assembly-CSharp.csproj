@@ -46,9 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefab\Choque.cs" />
-     <Compile Include="Assets\Prefab\Enemigos.cs" />
+     <Compile Include="Assets\Prefab\EnemigoBala.cs" />
+     <Compile Include="Assets\Scripts\Choque.cs" />
+     <Compile Include="Assets\Scripts\Enemigos.cs" />
      <Compile Include="Assets\Scripts\Jugador.cs" />
+     <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\UiManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

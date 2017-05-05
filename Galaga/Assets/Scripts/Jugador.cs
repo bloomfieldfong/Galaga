@@ -10,13 +10,14 @@ public class Jugador : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		jugador = new Vector2(0.0f,0.0f);
-		factorVel = 8.0f;
+		factorVel = 10.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		jugador.x = 0.0f;
 
+		//mueve al jugador de derecha a izquierda
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			jugador.x = -factorVel * Time.deltaTime;
 			transform.Translate (jugador);
@@ -25,8 +26,9 @@ public class Jugador : MonoBehaviour {
 			jugador.x = factorVel * Time.deltaTime;
 			transform.Translate(jugador);	
 		} 
-		if (Input.GetKey (KeyCode.Space)) {
-			Vector3 posIni = GameObject.Find("Nave").transform.position;
+		//dispara las balas que tirara el jugador 
+		if (Input.GetKeyUp (KeyCode.Space)) {
+			Vector2 posIni = GameObject.Find("Nave").transform.position;
 			Instantiate (shots, posIni, Quaternion.identity);
 			GameObject.Find("shots(Clone)").GetComponent<Rigidbody2D>().velocity = velocidad;
 			GameObject.Find("shots(Clone)").name = "shots";
